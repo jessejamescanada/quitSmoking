@@ -218,3 +218,23 @@ justify-content: center;
     text-align: center;
   }
 }
+
+@media(max-width: 768px) {
+  .container{
+    box-shadow: none;
+  }
+  .results{
+    box-shadow: none;
+    margin-top: 2rem;
+  }
+}
+
+@media(max-width: 1024px){
+  .container{
+    box-shadow: none;
+  }
+  .results{
+    box-shadow: none;
+    margin-top: 2rem;
+  }
+}
