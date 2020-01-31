@@ -42,6 +42,18 @@ if(cost.value ==='' || days.value === '' || numOfCigs.value === ''){
   days.value = '';
   numOfCigs.value = '1';
   resultsBTN.disabled = true;
+  const x = window.matchMedia("(max-width: 600px)")
+  myFunction(x)
+}
+
+// function removes input values on screens less then 600 px to display results
+const myFunction = (x) => {
+  if(x.matches) {
+    document.querySelector('.costPerPackContainer').style.display = 'none';
+    document.querySelector('.daysContainer').style.display = 'none';
+    document.querySelector('.cigsPerDayContainer').style.display = 'none';
+    resultsBTN.style.display = 'none'
+  }
 }
 
 const clearValues = () => {
@@ -55,6 +67,11 @@ const clearValues = () => {
   days.value = '';
   numOfCigs.value = '1';
   resultsBTN.disabled = false;
+  // when input section removed from mobile this brings it back
+  document.querySelector('.costPerPackContainer').style.display = 'block';
+  document.querySelector('.daysContainer').style.display = 'block';
+  document.querySelector('.cigsPerDayContainer').style.display = 'block';
+  resultsBTN.style.display = 'inline-block'
 }
 
 // event listeners
