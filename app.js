@@ -7,7 +7,6 @@ const howLong = document.querySelector('.howLongP');
 const moneySaved = document.querySelector('.moneySaved')
 const numberCigs = document.querySelector('.numberCigs')
 
-
 const calculate = () => {
 if(cost.value ==='' || days.value === '' || numOfCigs.value === ''){
   return false;
@@ -15,16 +14,21 @@ if(cost.value ==='' || days.value === '' || numOfCigs.value === ''){
   document.querySelector('.results').style.display = 'flex';
   const userCost = cost.value;
   let calendar = days.value;
+  console.log(calendar);
   const cigAmount = numOfCigs.value;
 // Convert dates to milliseconds then get days
-  const getDate = new Date();
-  const month = getDate.getUTCMonth() + 1; 
-  const day = getDate.getUTCDate();
-  const year = getDate.getUTCFullYear();
-  newdate = year + "-" + month + "-" + day;
-// calculates total days
+const getDate = moment().format('YYYY-MM-DD');
+console.log(getDate);
+//   const getDate = new Date();
+//   console.log(getDate);
+//   const month = getDate.getUTCMonth() + 1; 
+//   const day = getDate.getUTCDate();
+//   const year = getDate.getUTCFullYear();
+//   newdate = year + "-" + month + "-" + day;
+//   console.log(newdate);
+// // calculates total days
   const calendarMilliSeconds = new Date(calendar)
-  const newdateMilliseconds = new Date(newdate)
+  const newdateMilliseconds = new Date(getDate)
   const totalDaysQuit = (newdateMilliseconds - calendarMilliSeconds) /  86400000
   howLong.innerHTML = `<p>You've quit smoking for <strong class="bold">${totalDaysQuit.toFixed(0)}</strong> days!</p>`
 
