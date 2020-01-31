@@ -172,3 +172,49 @@ display: flex;
 width: 100%;
 justify-content: center;
 }
+
+
+/* mobile */
+@media(max-width: 600px){
+  .container{
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .fa-smoking-ban{
+    font-size: 9rem;
+    margin-top: 2rem;
+  }
+  .input-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .results{
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #btn{
+    margin-top: 1.2rem;
+  }
+  .how-long{
+    display: flex;
+    flex-direction: column;
+  }
+  .savedAndCigarettesConatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  .moneyContainer{
+    align-self: center;
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px dotted #dedede;
+  }
+  .numberContainer{
+    align-self: center;
+    text-align: center;
+  }
+}
