@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/3b56dc2a5c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Quit Smoking</title>
+</head>
+<body>
+  <h1>Quit Smoking</h1>
+  <div class="container">
+    <div class="input-container">
+      <div class="costPerPackContainer">
+        <h3>Cost per pack</h3>
+        <input type="number" id="costInput" placeholder="Cost">
+      </div>
+      <div class="daysContainer">
+        <h3>How many days since you quit?</h3>
+        <input type="date" id="daysInput" placeholder="Days">
+      </div>
+      <div class="cigsPerDayContainer">
+        <h3>Cigarettes per day</h3>
+        <select id="numOfCigs">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+        </select>
+       </div> 
+       <button id="btn">Get Results</button>
+    </div>
+    <i class="fas fa-smoking-ban fa-10x"></i>
+  </div>
+  <div class="results">
+    <div class="how-long">
+      <i class="far fa-clock fa-3x"></i>
+      <p>You've quit smoking for</p>
+    </div>
+    <div class="savedAndCigarettesConatiner">
+      <div class="moneyContainer">
+      <i class="fas fa-dollar-sign fa-3x"></i>
+      <div class="moneySaved">You've saved $</div>
+      </div>
+      <div class="numberContainer">
+      <i class="fas fa-hashtag fa-3x"></i>
+      <div class="numberCigs">Number of cigarettes you haven't smoked</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
