@@ -9,41 +9,27 @@ body{
   padding: 20px;
 }
 
+.bold{
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 h1{
   text-align: center;
   font-size: 38px;
   font-weight: 500;
 }
 
-
 .container{
-  /* background-color: rgba(251, 251, 251, 0.411); */
   max-width: 1000px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px; */
   margin: auto;
   padding: 1rem;
-  /* border-bottom: 1px dotted #dedede; */
-  /* box-shadow: 0px 10px 19px -13px rgba(0,0,0,0.75); */
-}
-
-.input-container{
-  /* background-color: green; */
- 
-  /* height: 40vh; */
-  /* margin: 0; */
-}
-
-.cigsPerDayContainer{
-  /* background-color: lightblue; */
 }
 
 .cigsPerDayContainer select{
@@ -77,20 +63,15 @@ h1{
   width: 16rem;
 }
 
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
-}
-
-
-
-.costPerPackContainer{
-  /* background-color: lightcoral; */
-}
-
-.daysContainer{
-  /* background-color: purple; */
 }
 
 #btn, #clearBTN{
@@ -100,7 +81,7 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   border-radius: 5px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 8px 12px;
 }
 
@@ -113,7 +94,6 @@ select:focus, button:focus, input:focus {
 }
 
 .fa-smoking-ban{
-  /* background-color: sandybrown; */
   display: flex;
   align-self: center;
   justify-content: center;
@@ -122,7 +102,6 @@ select:focus, button:focus, input:focus {
 }
 
 .results{
-  /* background-color: rgba(251, 251, 251, 0.411); */
   max-width: 1000px;
   display: none;
   flex-direction: column;
@@ -133,7 +112,6 @@ select:focus, button:focus, input:focus {
   margin-top: 2rem;
   padding: 1rem;
   padding-bottom: 2rem;
-  /* box-shadow: 0px 0px 19px -13px rgba(0,0,0,0.75); */
 }
 
 .how-long{
@@ -143,7 +121,6 @@ select:focus, button:focus, input:focus {
   justify-content: center;
   align-items: center;
   border-bottom: 1px dotted #dedede;
-/* background-color: orange; */
 }
 
 
@@ -151,7 +128,6 @@ select:focus, button:focus, input:focus {
 display: flex;
 flex-direction: row;
 width: 55%;
-/* background-color: turquoise; */
 }
 
 .moneyContainer, .numberContainer{
@@ -171,21 +147,19 @@ width: 55%;
   border-right: 1px dotted #dedede;
 }
 
-
 .fa-dollar-sign, .fa-hashtag{
   justify-content: center;
   align-self: center;
   margin: 1rem;
 }
+
 .moneySaved{
   display: flex;
   width: 100%;
   justify-content: center;
-/* background-color: violet; */
 }
 
 .numberCigs{
-/* background-color: yellow; */
 display: flex;
 width: 100%;
 justify-content: center;
@@ -225,7 +199,6 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
   }
   .moneyContainer{
     width: 160px;

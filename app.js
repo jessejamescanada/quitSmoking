@@ -7,11 +7,11 @@ const howLong = document.querySelector('.howLongP');
 const moneySaved = document.querySelector('.moneySaved')
 const numberCigs = document.querySelector('.numberCigs')
 
+
 const calculate = () => {
 if(cost.value ==='' || days.value === '' || numOfCigs.value === ''){
   return false;
 }
-
   document.querySelector('.results').style.display = 'flex';
   const userCost = cost.value;
   let calendar = days.value;
@@ -26,17 +26,17 @@ if(cost.value ==='' || days.value === '' || numOfCigs.value === ''){
   const calendarMilliSeconds = new Date(calendar)
   const newdateMilliseconds = new Date(newdate)
   const totalDaysQuit = (newdateMilliseconds - calendarMilliSeconds) /  86400000
-  howLong.innerHTML = `<p>You've quit smoking for <strong>${totalDaysQuit.toFixed(0)}</strong> days!</p>`
+  howLong.innerHTML = `<p>You've quit smoking for <strong class="bold">${totalDaysQuit.toFixed(0)}</strong> days!</p>`
 
   // calculate total money saved since quit day
   const eachCig = userCost / 25;
   const pricePerDay = eachCig * cigAmount
   const totalMoneySaved = pricePerDay * totalDaysQuit
-  moneySaved.innerHTML =`<p>You've saved <strong>$${totalMoneySaved.toFixed(2)}</strong></p>`
+  moneySaved.innerHTML =`<p>You've saved <strong class="bold">$${totalMoneySaved.toFixed(2)}</strong></p>`
 
 // calculate amount of cigarettes not smoked since quit day
   const cigarettesNotSmoked = cigAmount * totalDaysQuit
-  numberCigs.innerHTML = `<p><strong>${cigarettesNotSmoked.toFixed(0)}</strong> Cigarettes not smoked!</p>`
+  numberCigs.innerHTML = `<p><strong class="bold">${cigarettesNotSmoked.toFixed(0)}</strong> Cigarettes not smoked!</p>`
   
   cost.value = '';
   days.value = '';
@@ -57,6 +57,7 @@ const clearValues = () => {
   resultsBTN.disabled = false;
 }
 
+// event listeners
 resultsBTN.addEventListener('click', calculate)
 clearBTN.addEventListener('click', clearValues)
 
