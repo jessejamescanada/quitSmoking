@@ -8,6 +8,10 @@ const moneySaved = document.querySelector('.moneySaved')
 const numberCigs = document.querySelector('.numberCigs')
 
 const calculate = () => {
+if(cost.value ==='' || days.value === '' || numOfCigs.value === ''){
+  return false;
+}
+
   document.querySelector('.results').style.display = 'flex';
   const userCost = cost.value;
   let calendar = days.value;
