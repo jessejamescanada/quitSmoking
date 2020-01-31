@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://kit.fontawesome.com/3b56dc2a5c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Quit Smoking</title>
+  <title>Quit Smoking Calculator</title>
 </head>
 <body>
-  <h1>Quit Smoking</h1>
+  <h1>Quit Smoking Calculator</h1>
   <div class="container">
     <div class="input-container">
       <div class="costPerPackContainer">
         <h3>Cost per pack</h3>
-        <input type="number" id="costInput" placeholder="Cost">
+        <input type="number" id="costInput" placeholder="$">
       </div>
       <div class="daysContainer">
         <h3>How many days since you quit?</h3>
@@ -56,22 +57,23 @@
         </select>
        </div> 
        <button id="btn">Get Results</button>
+       <button id="clearBTN">Clear</button>
     </div>
     <i class="fas fa-smoking-ban fa-10x"></i>
   </div>
   <div class="results">
     <div class="how-long">
       <i class="far fa-clock fa-3x"></i>
-      <p>You've quit smoking for</p>
+      <p class="howLongP"></p>
     </div>
     <div class="savedAndCigarettesConatiner">
       <div class="moneyContainer">
       <i class="fas fa-dollar-sign fa-3x"></i>
-      <div class="moneySaved">You've saved $</div>
+      <div class="moneySaved"> </div>
       </div>
       <div class="numberContainer">
       <i class="fas fa-hashtag fa-3x"></i>
-      <div class="numberCigs">Number of cigarettes you haven't smoked</div>
+      <div class="numberCigs"></div>
       </div>
     </div>
   </div>
